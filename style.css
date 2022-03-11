@@ -2,10 +2,30 @@
 /*Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@200&display=swap');
+/*reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 /*containers*/
 .container{
   width: 60%;
-  margin-top: 20px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -336,16 +356,142 @@ p{
   color: rgb(255, 255, 255);
   cursor: pointer;
 }
+/*search nav*/
 .search{
-  width: 70%;
-  height: 30px;
+  display: flex;
+  align-items: center;
+  float: right;
+}
+.search input{
+  width: 300px;
+  height: 40px;
   border-radius: 50px;
   border: none;
-  box-shadow: inset 0 0 0 0 rgb(82, 83, 83);
+  padding-left: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-transform: capitalize;
+  transition: ease-out 0.4s;
+  text-align: center;
+}
+@media screen and (max-width: 600px) {
+  .search input{
+    display: none;
+  }
+}
+.search input:focus{
+  outline: none;
+}
+/*nav*/
+.menu{
+  display:none;
+  flex: 1 1 0%;
+  justify-content: flex-end;
+  margin: 0 -16px;
+
+}
+.menu a {
+  color: white;
+  padding: 8px 16px;
+  font-weight: 600;
+  margin: 0 16px;
+  text-decoration: none;
+  transition: 0.4s;
+  border-radius: 99px;
+}
+.menu a.is-active{
+  background-color: rgb(201, 94, 32);
+}
+.menu a.is-active, .menu a:hover {
+  background-color: rgb(201, 94, 32);
+  color: aliceblue;
+}
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  background-color: rgb(54, 54, 54);
+  padding: 16px 32px;
+  border-bottom: 3px solid rgb(82, 83, 83);
+}
+.hamburger{
+  display: block;
+  position: relative;
+  z-index: 1;
+  user-select: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+}
+.hamburger span{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  border-radius: 6px;
+  z-index: 1;
+  transform-origin: 0 0;
+  transition: 0.4s;
+}
+.containerNav{
+max-width: 1280px;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.containerNav button{
+  background-color: rgb(54, 54, 54);
+  color: aliceblue;
+  width: 100px;
+  height: 40px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  border: none;
   transition: ease-out 0.4s;
   cursor: pointer;
-  text-align: center;
-  justify-content: end;
+}
+.containerNav .logo{
+  color: aliceblue;
+  text-transform: uppercase;
+}
+.hamburger:hover span:nth-child(2){
+  transform:translateX(10px);
+}
+.hamburger.is-active span:nth-child(1){
+  transform:translate(0px, -8px) rotate(45deg);
+}
+.hamburger.is-active span:nth-child(3){
+  transform:translate(-3px, -3px) rotate(-45deg);
+}
+.hamburger.is-active span:nth-child(2){
+  opacity: 0;
+  transform: translateX(15px);
+}
+@media(min-width: 768px){
+  .hamburger{
+    display: none;
+  }
+  .menu{
+    display: flex;
+  }
+}
+/*padding*/
+.pt-20{
+  padding-top: 20px;
+}
+.pt-40{
+  padding-top: 40px;
+}
+.pt-60{
+  padding-top: 60px;
+}
+.pt-80{
+  padding-top: 80px;
 }
 
 
