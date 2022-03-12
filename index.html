@@ -17,7 +17,15 @@
           <div class="menu">
               <a class="is-active" href="/">Home</a>
                 <a href="#">About</a>
-                <a href="#">Contact</a>     
+                <a href="#">Contact</a>
+                <div class="dropdown1">
+                    <button onclick="myDrop1()" class="dropbtn1">Menu<i class="fa-solid fa-caret-down"></i></button>
+                    <div id="myDropdown1" class="dropdown-content1">
+                      <a class="is-active" href="#home">Home</a>
+                      <a href="#about">About</a>
+                      <a href="#contact">Contact</a>
+                    </div>
+                  </div>     
           </div>
           <button class="hamburger" onclick="myFunction()">
             <span></span>
@@ -33,6 +41,14 @@
                       <li><a class="is-active" href="/">Home</a></li>
                       <li><a href="#">About</a></li>
                       <li><a href="#">Contact</a></li>
+                      <div class="dropdown">
+                        <button onclick="myDrop()" class="dropbtn">Menu</button>
+                        <div id="myDropdown" class="dropdown-content">
+                          <a class="is-active" href="#home">Home</a>
+                          <a href="#about">About</a>
+                          <a href="#contact">Contact</a>
+                        </div>
+                      </div>
                 </ul>
             </div>   
             <button class="hamburgerF" onclick="myFunction()">
