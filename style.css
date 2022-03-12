@@ -73,14 +73,19 @@ body{
 /*Card*/
 .CardHover:hover{
   box-shadow: 0 8px 16px 0 var(--color-silver-medium);
+  width: 100%;
+  padding: 10px 10px 10px 10px;
+  transition: 1s;
+ 
 }
 .CardHover:hover .CardTitle{
   color: var(--color-light-blue);
 }
 .Card{
-  width: 100%;
+  width: 90%;
   margin-right: auto;
   margin-left: auto;
+  padding: 10px 10px 10px 10px;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 var(--color-silver-medium);
   transition: 0.3s;
@@ -748,7 +753,19 @@ footer ul li{
   display: block;
 }
 
-.dropdown1 a:hover {background-color: var(--color-orange-medium);}
+.dropdown1 a:hover {
+  box-shadow: inset 300px 0 0 0 var(--color-orange-medium);
+
+}
+.dropdown1 a{
+  box-shadow: inset 0 0 0 0 var(--color-yellow-light);
+  transition: ease-out 0.7s;
+}
+@media(max-width: 768px){
+  .dropdown1{
+    display: none;
+  }
+}
 
 .show1 {display: block;}
 
