@@ -23,6 +23,19 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
+/* :root*/
+:root{
+  --color-black: black;
+  --color-black-medium: rgb(44, 44, 44);
+  --color-light-blue: rgb(65, 120, 146);
+  --color-white: rgb(255, 255, 255);
+  --color-silver-medium: rgb(82, 83, 83);
+  --color-silver-light: rgb(209, 209, 209);
+  --color-green-light: rgb(65, 146, 79);
+  --color-red-light: rgb(146, 65, 65);
+  --color-yellow-light: rgb(196, 193, 60);
+  --color-orange-medium: rgb(201, 94, 32);
+}
 /*containers*/
 .container{
   width: 60%;
@@ -38,7 +51,7 @@ time, mark, audio, video {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid var(--color-black);
 }
 .containerCard{
   width: 60%;
@@ -48,15 +61,23 @@ time, mark, audio, video {
   margin-right: auto;
   margin-left: auto;
   border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px 0 var(--color-black);
   transition: 0.3s;
 }
 /*Card*/
 .CardHover:hover{
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 var(--color-silver-medium);
 }
 .CardHover:hover .CardTitle{
-  color: rgb(65, 120, 146);
+  color: var(--color-light-blue);
+}
+.Card{
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 var(--color-silver-medium);
+  transition: 0.3s;
 }
 /*Grid Col*/
 .col-2{
@@ -70,7 +91,7 @@ time, mark, audio, video {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
-    grid-column-gap: 3px;
+    grid-column-gap: 6px;
     grid-row-gap: 0px;
 }
 .col-4{
@@ -132,123 +153,123 @@ time, mark, audio, video {
 }
 /*buttons*/
 .btn-primary{
-  background-color: rgb(65, 120, 146);
-  color: aliceblue;
+  background-color: var(--color-light-blue);
+  color: var(--color-white);
   width: 100px;
   height: 40px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   border-radius: 50px;
   border: none;
-  box-shadow: inset 0 0 0 0 rgb(82, 83, 83);
+  box-shadow: inset 0 0 0 0 var(--color-silver-medium);
   transition: ease-out 0.4s;
   cursor: pointer;
 }
 .btn-primary:hover{
-  color: aliceblue;
+  color: var(--color-white);
   width: 100px;
   height: 40px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   border-radius: 50px;
   border: none;
-  box-shadow: inset 300px 0 0 0 rgb(82, 83, 83);
+  box-shadow: inset 300px 0 0 0 var(--color-silver-medium);
 }
 .btn-success{
-  background-color: rgb(65, 146, 79);
-  color: aliceblue;
+  background-color: var(--color-green-light);
+  color: var(--color-white);
   width: 100px;
   height: 40px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   border-radius: 50px;
   border: none;
-  box-shadow: inset 0 0 0 0 rgb(82, 83, 83);
+  box-shadow: inset 0 0 0 0 var(--color-silver-medium);
   transition: ease-out 0.4s;
   cursor: pointer;
 }
 .btn-success:hover{
-  background-color: rgb(82, 83, 83);
-  color: aliceblue;
+  background-color: var(--color-silver-medium);
+  color: var(--color-white);
   width: 100px;
   height: 40px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   border-radius: 50px;
   border: none;
-  box-shadow: inset 300px 0 0 0 rgb(82, 83, 83);
+  box-shadow: inset 300px 0 0 0 var(--color-silver-medium);
 }
 .btn-danger{
-  background-color: rgb(146, 65, 65);
-  color: aliceblue;
+  background-color: var(--color-red-light);
+  color: var(--color-white);
   width: 100px;
   height: 40px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   border-radius: 50px;
   border: none;
-  box-shadow: inset 0 0 0 0 rgb(82, 83, 83);
+  box-shadow: inset 0 0 0 0 var(--color-silver-medium);
   transition: ease-out 0.4s;
   cursor: pointer;
 }
 .btn-danger:hover{
-  background-color: rgb(82, 83, 83);
-  color: aliceblue;
+  background-color: var(--color-silver-medium);
+  color: var(--color-white);
   width: 100px;
   height: 40px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   border-radius: 50px;
   border: none;
-  box-shadow: inset 300px 0 0 0 rgb(82, 83, 83);
+  box-shadow: inset 300px 0 0 0 var(--color-silver-medium);
 }
 .btn-warning{
-  background-color: rgb(196, 193, 60);
-  color: aliceblue;
+  background-color: var(--color-yellow-light);
+  color: var(--color-white);
   width: 100px;
   height: 40px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   border-radius: 50px;
   border: none;
-  box-shadow: inset 0 0 0 0 rgb(82, 83, 83);
+  box-shadow: inset 0 0 0 0 var(--color-silver-medium);
   transition: ease-out 0.4s;
   cursor: pointer;
 }
 .btn-warning:hover{
-  background-color: rgb(82, 83, 83);
-  color: aliceblue;
+  background-color: var(--color-yellow-light);
+  color: var(--color-white);
   width: 100px;
   height: 40px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   border-radius: 50px;
   border: none;
-  box-shadow: inset 300px 0 0 0 rgb(82, 83, 83);
+  box-shadow: inset 300px 0 0 0 var(--color-silver-medium);
 }
 .btn-info{
-  background-color: rgb(148, 151, 153);
-  color: aliceblue;
+  background-color: var(--color-silver-medium);
+  color: var(--color-white);
   width: 100px;
   height: 40px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   border-radius: 50px;
   border: none;
-  box-shadow: inset 0 0 0 0 rgb(82, 83, 83);
+  box-shadow: inset 0 0 0 0 var(--color-silver-light);
   transition: ease-out 0.4s;
   cursor: pointer;
 }   
 .btn-info:hover{
-  background-color: rgb(82, 83, 83);
-  color: aliceblue;
+  background-color: var(--color-silver-light);
+  color: var(--color-black-medium);
   width: 100px;
   height: 40px;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   border-radius: 50px;
   border: none;
-  box-shadow: inset 300px 0 0 0 rgb(82, 83, 83);
+  box-shadow: inset 300px 0 0 0 var(--color-silver-light);
 }
 /*fonts*/
 h1{
@@ -338,22 +359,22 @@ p{
   margin-top: 15px;
 }
 .table th{
-  background-color: rgb(82, 83, 83);
-  color: aliceblue;
+  background-color: var(--color-silver-medium);
+  color: var(--color-white);
   padding: 10px;
-  border-bottom: 1px solid rgb(82, 83, 83);
+  border-bottom: 1px solid var(--color-silver-medium);
 }
 .table td{
   padding: 10px;
-  border-bottom: 1px solid rgb(82, 83, 83);
+  border-bottom: 1px solid var(--color-silver-medium);
   font-family: 'Lato', sans-serif;
 }
 .table tr:nth-child(even){
-  background-color: rgb(209, 209, 209);
+  background-color: var(--color-silver-light);
 }
 .table tr:hover{
-  background-color: rgb(44, 44, 44);
-  color: rgb(255, 255, 255);
+  background-color: var(--color-black-medium);
+  color: var(--color-white);
   cursor: pointer;
 }
 /*search nav*/
@@ -391,7 +412,7 @@ p{
 
 }
 .menu a {
-  color: white;
+  color: var(--color-white);
   padding: 8px 16px;
   font-weight: 600;
   margin: 0 16px;
@@ -400,11 +421,11 @@ p{
   border-radius: 99px;
 }
 .menu a.is-active{
-  background-color: rgb(201, 94, 32);
+  background-color: var(--color-orange-medium);
 }
 .menu a.is-active, .menu a:hover {
-  background-color: rgb(201, 94, 32);
-  color: aliceblue;
+  background-color: var(--color-orange-medium);
+  color: var(--color-white);
 }
 nav{
   position: fixed;
@@ -412,9 +433,9 @@ nav{
   left: 0;
   right: 0;
   z-index: 99;
-  background-color: rgb(54, 54, 54);
+  background-color: var(--color-black-medium);
   padding: 16px 32px;
-  border-bottom: 3px solid rgb(82, 83, 83);
+  border-bottom: 3px solid var(--color-silver-medium);
 }
 .hamburger{
   display: block;
@@ -431,7 +452,7 @@ nav{
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--color-white);
   border-radius: 6px;
   z-index: 1;
   transform-origin: 0 0;
@@ -467,15 +488,15 @@ justify-content: space-between;
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--color-white);
   border-radius: 6px;
   z-index: 1;
   transform-origin: 0 0;
   transition: 0.4s;
 }
 .containerNavFull button{
-  background-color: rgb(54, 54, 54);
-  color: aliceblue;
+  background-color: var(--color-black-medium);
+  color: var(--color-white);
   width: 100px;
   height: 40px;
   font-family: 'Roboto', sans-serif;
@@ -492,7 +513,7 @@ justify-content: space-between;
 
 }
 .menuF a {
-  color: white;
+  color: var(--color-white);
   padding: 8px 16px;
   font-weight: 600;
   margin: 0 16px;
@@ -501,11 +522,11 @@ justify-content: space-between;
   border-radius: 99px;
 }
 .menuF a.is-active{
-  background-color: rgb(201, 94, 32);
+  background-color: var(--color-orange-medium);
 }
 .menuF a.is-active, .menuF a:hover {
-  background-color: rgb(201, 94, 32);
-  color: aliceblue;
+  background-color: var(--color-orange-medium);
+  color: var(--color-white);
 }
 
 .menuDrop{
@@ -528,7 +549,7 @@ text-align: center;
   margin: 15px 0;
 }
 .menuDrop ul li a{
-  color: white;
+  color: var(--color-white);
   text-decoration: none;
   font-size: 30px;
   font-weight: 500;
@@ -542,8 +563,8 @@ text-align: center;
   justify-content: space-between;
   }
 .containerNav button{
-  background-color: rgb(54, 54, 54);
-  color: aliceblue;
+  background-color: var(--color-black-medium);
+  color: var(--color-white);
   width: 100px;
   height: 40px;
   font-family: 'Roboto', sans-serif;
@@ -554,7 +575,7 @@ text-align: center;
 }
 /*end nav full*/
 .containerNav .logo{
-  color: aliceblue;
+  color: var(--color-white);
   text-transform: uppercase;
 }
 .hamburger:hover span:nth-child(2){
@@ -589,6 +610,11 @@ text-align: center;
 }
 .pt-80{
   padding-top: 80px;
+}
+/*a href*/
+a{
+  text-decoration: none;
+  color: var(--color-white);
 }
 
 
