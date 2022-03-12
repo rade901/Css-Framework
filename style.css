@@ -23,6 +23,11 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 /* :root*/
 :root{
   --color-black: black;
@@ -294,7 +299,7 @@ p{
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 3px;
-    grid-row-gap: 0px;
+    grid-row-gap: 11px;
   }
   .col-4{
     display: grid;
@@ -581,13 +586,13 @@ text-align: center;
 .hamburger:hover span:nth-child(2){
   transform:translateX(10px);
 }
-/*hamburger full hover*/
+/*hamburger full close*/
 
 .hamburgerF span:nth-child(1){
-  transform:translate(4px, -16px) rotate(45deg);
+  transform:translate(3px, -18px) rotate(45deg);
 }
 .hamburgerF span:nth-child(2){
-  transform:translate(2px, -3px) rotate(-45deg);
+  transform:translate(2px, -4px) rotate(-45deg);
 }
 
 @media(min-width: 768px){
@@ -615,6 +620,36 @@ text-align: center;
 a{
   text-decoration: none;
   color: var(--color-white);
+}
+/*footer*/
+footer{
+  background-color: var(--color-black-medium);
+  padding: 20px 0;
+  color: var(--color-white);
+  margin-top: auto;
+  text-align: center;
+}
+footer a{
+  color: var(--color-white);
+  text-decoration: none;
+}
+footer a:hover{
+  color: var(--color-orange-medium);
+}
+footer ul li{
+  display: inline-block;
+  margin: 0 16px;
+}
+.footer-social{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-social li a{
+  color: var(--color-white);
+  font-size: 30px;
+  margin: 0 8px;
+  transition: 0.4s;
 }
 
 
