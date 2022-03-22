@@ -622,6 +622,9 @@ text-align: center;
 .pt-80{
   padding-top: 80px;
 }
+.pt-100{
+  padding-top: 100px;
+}
 .pb-40{
   padding-bottom: 40px;
 }
@@ -675,9 +678,9 @@ footer ul li{
   margin: 0 16px;
   text-decoration: none;
   font-size: 30px;
-  transition: 0.4s;
   border: none;
   cursor: pointer;
+  outline: none;
 }
 
 .dropbtn:hover, .dropbtn:focus {
@@ -694,7 +697,7 @@ footer ul li{
   position: absolute;
   background-color: var(--color-black-medium);
   min-width: 160px;
-  overflow: auto;
+  overflow: hidden;
   z-index: 1;
   font-size: 20px;
   font-weight: 500;
@@ -723,6 +726,7 @@ footer ul li{
   transition: 0.4s;
   border: none;
   cursor: pointer;
+  outline: none;
 }
 
 .dropbtn1:hover, .dropbtn1:focus {
@@ -767,6 +771,75 @@ footer ul li{
   }
 }
 
-.show1 {display: block;}
+.show1 {
+  display: block;
+}
+/*transition page*/
+.container{
+  animation: slidein 2s;
+}
+.menuF a{
+  animation: menuF 2s;
+}
+@keyframes menuF {
+from {
+  transform: translateX(100%);
+  opacity: 0;
+}
+to {
+  transform: translateX(0);
+  opacity: 1;
+}
+}
+
+@keyframes slidein {
+  from {
+    transform: rotateX(-10deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: rotateX(0);
+    opacity: 1;
+  }
+}
+/*images hover with text*/
+.imgCol{
+  position: relative;
+  overflow: hidden;
+}
+.col-3 img{
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+}
+.col-3 .content{
+  position: absolute;
+  inset: 0;
+  font-size: 1.5rem;
+  padding: 1rem;
+  background: rgba(255,255,255,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.col-3 img,.col-3 .content{
+  transition: ease-out 200ms;
+}
+.imgCol .content.fade{
+  opacity: 0;
+}
+.imgCol:hover .content.fade{
+  opacity: 1;
+}
+.imgCol:hover .blur{
+  filter:blur(5px);
+}
+.Hover-title{
+  font-size: 2rem;
+}
+
 
 
